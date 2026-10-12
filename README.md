@@ -17,9 +17,9 @@ The source document identifies the following PreProd topology:
 
 | Server | Role | Cluster Node Index |
 |---|---|---:|
-| `170.11.196.11` | Admin Console / Cluster Console | `100` |
-| `170.11.196.11` | Cluster Engine 1 | `101` |
-| `170.11.196.12` | Cluster Engine 2 | `102` |
+| `178.16.176.14` | Admin Console / Cluster Console | `100` |
+| `178.16.176.14` | Cluster Engine 1 | `101` |
+| `178.16.176.15` | Cluster Engine 2 | `102` |
 
 The document also specifies PingFederate **9.3.3** and JDK **8u202**.
 
@@ -46,7 +46,7 @@ The intended cluster relationship from the source configuration is:
                                   |
                     +-------------+-------------+
                     |                           |
-          170.11.196.11                 170.11.196.12
+          178.16.176.14                 178.16.176.15
                     |                           |
           +---------+---------+             +---+---+
           |                   |             |       |
@@ -60,7 +60,7 @@ The intended cluster relationship from the source configuration is:
 The cluster discovery configuration in the source document uses:
 
 ```properties
-pf.cluster.tcp.discovery.initial.hosts=170.11.196.11[8600],170.11.196.12[8600]
+pf.cluster.tcp.discovery.initial.hosts=178.16.176.14[8600],178.16.176.15[8600]
 ```
 
 ---
@@ -105,7 +105,7 @@ The runtime engines use:
 The Admin Console is installed on:
 
 ```text
-170.11.196.11
+178.16.176.14
 ```
 
 The source document specifies the administrative user:
@@ -183,7 +183,7 @@ pf.operational.mode=CLUSTERED_CONSOLE
 pf.cluster.node.index=100
 pf.cluster.bind.port=8700
 pf.cluster.failure.detection.bind.port=8900
-pf.cluster.tcp.discovery.initial.hosts=170.11.196.11[8600],170.11.196.12[8600]
+pf.cluster.tcp.discovery.initial.hosts=178.16.176.14[8600],178.16.176.15[8600]
 ```
 
 ### Admin Console Configuration Summary
@@ -196,7 +196,7 @@ pf.cluster.tcp.discovery.initial.hosts=170.11.196.11[8600],170.11.196.12[8600]
 | Node Index | `100` |
 | Cluster Bind Port | `8700` |
 | Failure Detection Port | `8900` |
-| Discovery Hosts | `170.11.196.11[8600],170.11.196.12[8600]` |
+| Discovery Hosts | `178.16.176.14[8600],178.16.176.15[8600]` |
 
 ---
 
@@ -238,7 +238,7 @@ source ~/.bash_profile
 The source document describes Engine 1 as running on:
 
 ```text
-170.11.196.11
+178.16.176.14
 ```
 
 The runtime user is:
@@ -303,7 +303,7 @@ pf.operational.mode=CLUSTERED_ENGINE
 pf.cluster.node.index=101
 pf.cluster.bind.port=8600
 pf.cluster.failure.detection.bind.port=8800
-pf.cluster.tcp.discovery.initial.hosts=170.11.196.11[8600],170.11.196.12[8600]
+pf.cluster.tcp.discovery.initial.hosts=178.16.176.14[8600],178.16.176.15[8600]
 ```
 
 ### Engine 1 Configuration Summary
@@ -316,7 +316,7 @@ pf.cluster.tcp.discovery.initial.hosts=170.11.196.11[8600],170.11.196.12[8600]
 | Node Index | `101` |
 | Cluster Bind Port | `8600` |
 | Failure Detection Port | `8800` |
-| Discovery Hosts | `170.11.196.11[8600],170.11.196.12[8600]` |
+| Discovery Hosts | `178.16.176.14[8600],178.16.176.15[8600]` |
 
 ---
 
@@ -360,7 +360,7 @@ source ~/.bash_profile
 Engine 2 is installed on:
 
 ```text
-170.11.196.12
+178.16.176.15
 ```
 
 The runtime user is:
@@ -413,7 +413,7 @@ pf.operational.mode=CLUSTERED_ENGINE
 pf.cluster.node.index=102
 pf.cluster.bind.port=8600
 pf.cluster.failure.detection.bind.port=8800
-pf.cluster.tcp.discovery.initial.hosts=170.11.196.11[8600],170.11.196.12[8600]
+pf.cluster.tcp.discovery.initial.hosts=178.16.176.14[8600],178.16.176.15[8600]
 ```
 
 ### Engine 2 Configuration Summary
@@ -426,7 +426,7 @@ pf.cluster.tcp.discovery.initial.hosts=170.11.196.11[8600],170.11.196.12[8600]
 | Node Index | `102` |
 | Cluster Bind Port | `8600` |
 | Failure Detection Port | `8800` |
-| Discovery Hosts | `170.11.196.11[8600],170.11.196.12[8600]` |
+| Discovery Hosts | `178.16.176.14[8600],178.16.176.15[8600]` |
 
 ---
 
@@ -681,7 +681,7 @@ The supplied validation screenshot shows the following protocol settings:
 
 ### Admin Console
 
-- [ ] Confirm server `170.11.196.11` is reachable.
+- [ ] Confirm server `178.16.176.14` is reachable.
 - [ ] Confirm `ping9ptnradmin` access.
 - [ ] Install JDK `8u202`.
 - [ ] Install PingFederate `9.3.3`.
@@ -696,7 +696,7 @@ The supplied validation screenshot shows the following protocol settings:
 
 ### Engine 1
 
-- [ ] Confirm server `170.11.196.11`.
+- [ ] Confirm server `178.16.176.14`.
 - [ ] Confirm `ping9ptnr` access.
 - [ ] Install JDK `8u202`.
 - [ ] Install PingFederate runtime `9.3.3`.
@@ -712,7 +712,7 @@ The supplied validation screenshot shows the following protocol settings:
 
 ### Engine 2
 
-- [ ] Confirm server `170.11.196.12`.
+- [ ] Confirm server `178.16.176.15`.
 - [ ] Confirm `ping9ptnr` access.
 - [ ] Install JDK `8u202`.
 - [ ] Install PingFederate runtime `9.3.3`.
@@ -760,9 +760,9 @@ These have been called out rather than silently treating them as authoritative v
 ## Cluster Nodes
 
 ```text
-Console : 170.11.196.11 / Node 100
-Engine1 : 170.11.196.11 / Node 101
-Engine2 : 170.11.196.12 / Node 102
+Console : 178.16.176.14 / Node 100
+Engine1 : 178.16.176.14 / Node 101
+Engine2 : 178.16.176.15 / Node 102
 ```
 
 ## PingFederate
