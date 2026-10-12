@@ -89,7 +89,7 @@ The source document uses:
 The Admin Console installation uses:
 
 ```text
-/apps/partner/pingfederate-9.3.3-admin-ptnr
+/apps/partner/pingfederate-9.3.3-admin
 ```
 
 The runtime engines use:
@@ -118,7 +118,7 @@ ping9ptnradmin
 
 ```bash
 cd /apps/partner
-mkdir pingfederate-9.3.3-admin-ptnr
+mkdir pingfederate-9.3.3-admin
 ```
 
 ## 3.2 Install Java
@@ -152,13 +152,13 @@ PingFederate9.3.3.zip
 to:
 
 ```text
-/apps/partner/pingfederate-9.3.3-admin-ptnr
+/apps/partner/pingfederate-9.3.3-admin
 ```
 
 Then:
 
 ```bash
-cd /apps/partner/pingfederate-9.3.3-admin-ptnr
+cd /apps/partner/pingfederate-9.3.3-admin
 unzip PingFederate9.3.3.zip
 ```
 
@@ -171,7 +171,7 @@ The source document then moves the extracted `pingfederate` directory into the i
 Navigate to:
 
 ```bash
-cd /apps/partner/pingfederate-9.3.3-admin-ptnr/pingfederate/bin
+cd /apps/partner/pingfederate-9.3.3-admin/pingfederate/bin
 ```
 
 Configure the Admin Console properties:
@@ -212,7 +212,7 @@ The source document specifies:
 
 ```bash
 export JAVA_HOME=/apps/partner/jdk/jdk1.8.0_202
-export PF_HOME=/apps/partner/pingfederate-9.3.3-admin-ptnr/pingfederate
+export PF_HOME=/apps/partner/pingfederate-9.3.3-admin/pingfederate
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 
 alias ExecStart="${PF_HOME}/sbin/pingfederate-run.sh"
@@ -487,10 +487,10 @@ Documentation=https://docs.pingidentity.com
 [Service]
 Type=simple
 User=ping9ptnradmin
-WorkingDirectory=/apps/partner/pingfederate-9.3.3-admin-ptnr/pingfederate
+WorkingDirectory=/apps/partner/pingfederate-9.3.3-admin/pingfederate
 Environment="JAVA_HOME=/apps/partner/jdk/jdk1.8.0_202"
-ExecStart=/apps/partner/pingfederate-9.3.3-admin-ptnr/pingfederate/sbin/pingfederate-run.sh
-ExecStop=/apps/partner/pingfederate-9.3.3-admin-ptnr/pingfederate/sbin/pingfederate-shutdown.sh
+ExecStart=/apps/partner/pingfederate-9.3.3-admin/pingfederate/sbin/pingfederate-run.sh
+ExecStop=/apps/partner/pingfederate-9.3.3-admin/pingfederate/sbin/pingfederate-shutdown.sh
 ```
 
 ## 6.2 Engine Service
@@ -556,7 +556,7 @@ ExecStart
 Or run directly:
 
 ```bash
-cd /apps/partner/pingfederate-9.3.3-admin-ptnr/pingfederate/sbin/
+cd /apps/partner/pingfederate-9.3.3-admin/pingfederate/sbin/
 ./pingfederate-run.sh
 ```
 
@@ -575,7 +575,7 @@ ExecStop
 Or:
 
 ```bash
-cd /apps/partner/pingfederate-9.3.3-admin-ptnr/pingfederate/sbin/
+cd /apps/partner/pingfederate-9.3.3-admin/pingfederate/sbin/
 ./pingfederate-shutdown.sh
 ```
 
