@@ -222,7 +222,7 @@ alias cdlog="cd ${PF_HOME}/log"
 alias cdbin="cd ${PF_HOME}/bin"
 alias cdping="cd ${PF_HOME}"
 alias cdconf="cd ${PF_HOME}/pingfederate/server/default/conf"
-alias taillog="tail -f ${PF_HOME}/log/server_srbhppoauthapp2.log"
+alias taillog="tail -f ${PF_HOME}/log/server_ ppoauthapp2.log"
 ```
 
 Reload the profile:
@@ -344,7 +344,7 @@ alias cdlog="cd ${PF_HOME}/log"
 alias cdbin="cd ${PF_HOME}/bin"
 alias cdping="cd ${PF_HOME}"
 alias cdconf="cd ${PF_HOME}/pingfederate/server/default/conf"
-alias taillog="tail -f ${PF_HOME}/log/server_srbhppoauthapp2.log"
+alias taillog="tail -f ${PF_HOME}/log/server_ ppoauthapp2.log"
 ```
 
 Reload:
@@ -454,7 +454,7 @@ alias cdlog="cd ${PF_HOME}/log"
 alias cdbin="cd ${PF_HOME}/bin"
 alias cdping="cd ${PF_HOME}"
 alias cdconf="cd ${PF_HOME}/pingfederate/server/default/conf"
-alias taillog="tail -f ${PF_HOME}/log/server_srbhppoauthapp2.log"
+alias taillog="tail -f ${PF_HOME}/log/server_ ppoauthapp2.log"
 ```
 
 Reload:
